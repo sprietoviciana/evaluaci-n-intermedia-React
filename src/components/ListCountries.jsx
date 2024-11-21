@@ -2,11 +2,10 @@ import Country from "./Country";
 
 function ListCountries() {
   return (
-    <>
-  <div>ListCountries</div>
-  <Country />
-  </>
-  )
+    <section>
+      <div>ListCountries</div>
+    </section>
+  );
 }
 
 export default ListCountries;
