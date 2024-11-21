@@ -2,19 +2,29 @@ import "../scss/App.scss";
 import ListCountries from "./ListCountries";
 import CountriesData from "../services/data.json";
 import Filters from "./Filters";
+import { useState } from "react";
 
 function App() {
-  console.log(CountriesData);
+  const [searchValue, setSearchValue] = useState("");
+
+  const changeSearch = (value) => {
+    setSearchValue(value);
+  };
+
+  const filteredCountry = CountriesData.filter((countryData) => {
+    return countryData.title.includes(searchValue);
+  });
+
   return (
     <>
       <header>
         <h1>Country Info App</h1>
       </header>
       <section>
-        <Filters />
+        <Filters onChangeFilter={changeSearch} />
       </section>
       <main>
-        <ListCountries countries={CountriesData}/>
+        <ListCountries countries={filteredCountry} />
       </main>
     </>
   );
