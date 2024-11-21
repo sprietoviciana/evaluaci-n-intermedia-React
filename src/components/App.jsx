@@ -12,7 +12,7 @@ function App() {
   };
 
   const filteredCountry = CountriesData.filter((countryData) => {
-    return countryData.title.includes(searchValue);
+    return countryData.name.common.includes(searchValue);
   });
 
   return (

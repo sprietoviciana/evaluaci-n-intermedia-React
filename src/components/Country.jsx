@@ -5,8 +5,8 @@ function Country({ countryData }) {
     <>
       <div>{countryData.flag}</div>
       <h3>{countryData.name.official}</h3>
-      <p>{countryData.capital}</p>
-      <p>{countryData.continents}</p>
+      <p>{countryData.capital[0]}</p>
+      <p>{countryData.continents[0]}</p>
     </>
   );
 }
