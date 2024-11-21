@@ -1,9 +1,14 @@
 import Country from "./Country";
 
-function ListCountries() {
+function ListCountries({ countries }) {
+  const countriesItem = countries.map((countryItem) => {
+    return (
+      <Country countryData={countryItem} key={countryItem.name.official} />
+    );
+  });
   return (
     <section>
-      <div>ListCountries</div>
+      <div>{countriesItem}</div>
     </section>
   );
 }

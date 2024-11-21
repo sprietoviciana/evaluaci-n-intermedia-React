@@ -4,6 +4,7 @@ import CountriesData from "../services/data.json";
 import Filters from "./Filters";
 
 function App() {
+  console.log(CountriesData);
   return (
     <>
       <header>
@@ -13,7 +14,7 @@ function App() {
         <Filters />
       </section>
       <main>
-        <ListCountries />
+        <ListCountries countries={CountriesData}/>
       </main>
     </>
   );
