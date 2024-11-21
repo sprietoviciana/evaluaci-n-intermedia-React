@@ -1,4 +1,5 @@
 import Country from "./Country";
+import PropTypes from "prop-types";
 
 function ListCountries({ countries }) {
   const countriesItem = countries.map((countryItem) => {
@@ -14,3 +15,7 @@ function ListCountries({ countries }) {
 }
 
 export default ListCountries;
+
+ListCountries.propTypes = {
+  countries: PropTypes.array.isRequired,
+};

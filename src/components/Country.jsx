@@ -1,5 +1,6 @@
+import PropTypes from "prop-types";
+
 function Country({ countryData }) {
-//   console.log(countryData);
   return (
     <>
       <div>{countryData.flag}</div>
@@ -11,3 +12,7 @@ function Country({ countryData }) {
 }
 
 export default Country;
+
+Country.propTypes = {
+  countryData: PropTypes.array.isRequired,
+};
